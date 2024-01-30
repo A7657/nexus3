@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *{
     padding: 0;
     border: 0;
@@ -41,10 +42,11 @@ nav a:hover{
 }
 .main-image img{
     position: relative;
-    height: 300px;
+    
     width: 500px;
     border-radius: 30px;
     padding: 20px ;
+    padding-top:80px;
 }
 .home{
     
@@ -53,14 +55,20 @@ nav a:hover{
     margin-bottom: 10px;
     padding: 50px;
 }
+.home_h h1{
+    font-size: 32px;
+}
 .home_h{
-    padding-top: 50px;
+    padding-top: 100px;
+}
+.home_h p{
+    font-size:20px;
 }
 .about_us{
     border: none;
     
 }
-.about_us h2{
+.about_us h1{
     text-align: center;
     padding: 10px;
 
@@ -72,13 +80,21 @@ nav a:hover{
 
 } 
 .about_d div p{
-    font-size: 18px;
+    font-size: 24px;
+    padding-top: 50px;
+    
 }
 .about_d div img{
-    height: 300px;
+    height: 400px;
     width: 500px;
     position: relative;
     padding-left: 20px;
+    padding-top: 50px;
+    border-radius: 30px;
+}
+.about_d div ul li{
+    font-size: 20px;
+    line-height: 300%;
 }
 .services{
     text-align: center;
@@ -130,14 +146,16 @@ nav a:hover{
 .services_box:hover .services_layer{
     transform: translateY(0);
 }
-.services_layer a{
-    color: white;
+.services_layer a {
+    color: cyan;
     font-size: 15px;
+}
+.services_layer H3{
+    color: blue;
 }
 
 .contact_us{
     text-align: center;
-    border: 1px solid white;
     padding: 10px;
     margin-top: 10px;
 }
@@ -146,7 +164,8 @@ nav a:hover{
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
-
+    border: 1px solid white;
+    padding: 20px;
 }
 
 .contact_us form .input-box{
@@ -179,7 +198,109 @@ nav a:hover{
 .contact_us form .btn{
     margin-top: 2rem;
     cursor: pointer;
+    padding: 20px;
 }
-footer{
-    border: 1px solid pink;
+
+.separation{
+    border-top: 1px solid white;
+
+}
+.social{
+    padding: 10px ;
+
+}
+.social a i{
+    font-size: 32px;
+    color: white;
+}
+.social a:hover i{
+    color: blue;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 375px){
+    .main-image img{
+        width: 90vw;
+    }
+
+    .about_d div img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 425px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) and (min-width: 425px){
+    .about_d  div img {
+        width: 40vw;
+    }
+    .about_d div ul li{
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .about_d div p{
+        font-size: 18px;
+    }
+    .home_h h1{
+        font-size: 32px;
+    }
+    
+    .home_h p{
+        font-size:18px;
+    }
+    .main-image img{       
+        width: 40vw;
+        margin-top: 100px;
+    }
+
+}
+@media (max-width: 425px) and (min-width: 375px){
+    .home{
+        flex-direction: column-reverse;
+    }
+    .about_d{
+        flex-direction: column-reverse;
+    }
+    .main-image img{
+        width: 90vw;
+        margin-right: 40px;
+        
+    }
+    .home_h h3{
+        font-size: 16px;
+    }
+    .home_h p{
+        font-size: 13px
+    }
+    .about_us h1{
+        font-size: 20px;
+    }
+    .about_d div img{
+        width: 80vw;
+    }
+    .about_d div h2{
+        font-size: 16px;
+    }
+    .nav-logo{
+        padding-left: 30px;
+        font-size: 20px;
+    }
+    .nav-links{
+        display:hidden;
+    }
 }
